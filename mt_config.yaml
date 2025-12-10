@@ -1,0 +1,21 @@
+# WazuhBoard Multi-Tenant Configuration
+# No doc_filter needed - index scoping happens automatically at the connector level
+
+multi_tenant:
+  enabled: true
+
+  # Define your clients - indices will auto-scope based on client name
+  # Example: selecting "lab" will query "lab:wazuh-alerts-*" automatically
+  client_configs:
+    "lab":
+      display_name: "Lab"
+
+    "homelab":
+      display_name: "Home"
+    
+    # "production":
+    #   display_name: "Production"
+
+  # Default client shown on dashboard load
+  default_client_config:
+    display_name: "Default Client"

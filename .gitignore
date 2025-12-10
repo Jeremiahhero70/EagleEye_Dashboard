@@ -1,0 +1,15 @@
+# Local env settings to keep secrets out of the repo
+.env
+# Virtualenv
+.venv/
+# Python
+__pycache__/
+*.py[cod]
+# pytest cache
+.pytest_cache/
+# IDE directories
+.vscode/
+# OS files
+.DS_Store
+# backup files
+*.bak
